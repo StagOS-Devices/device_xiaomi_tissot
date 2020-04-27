@@ -23,6 +23,8 @@ $(call inherit-product, device/xiaomi/tissot/device.mk)
 
 # Inherit some common DerpFest OS stuff.
 $(call inherit-product, vendor/stag/config/common.mk)
+STAG_BUILD_TYPE := OFFICIAL
+WITH_GAPPS := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := tissot
@@ -38,7 +40,6 @@ TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
 IS_PHONE := true
 
-STAG_BUILDTYPE := UNOFFICIAL
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="tissot-user 8.0.0 OPR1.170623.026 8.1.10 release-keys"
