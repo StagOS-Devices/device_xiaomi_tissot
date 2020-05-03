@@ -22,9 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/tissot/device.mk)
 
 # Inherit some common DerpFest OS stuff.
-$(call inherit-product, vendor/stag/config/common.mk)
-STAG_BUILD_TYPE := OFFICIAL
-WITH_GAPPS := true
+$(call inherit-product, vendor/stag/main.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := tissot
